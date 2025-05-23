@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>AI Object Detection</h2>
+        <div id="drop-area">
+            <p>Drag & Drop or Click to Upload Image</p>
+            <input type="file" id="image-input" accept="image/*">
+            <img id="preview" src="" alt="Image preview" style="max-width: 100%; margin-top: 10px; display: none;" />
+        </div>
+        <button id="detect-btn" disabled>Detect Objects</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

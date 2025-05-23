@@ -1,0 +1,126 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main Container */
+.container {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Heading */
+h2 {
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Drop Area */
+#drop-area {
+    border: 2px dashed #0d6efd;
+    padding: 25px;
+    border-radius: 12px;
+    background: #f0f8ff;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#drop-area.highlight {
+    border-color: #084298;
+    background-color: #e6f0ff;
+}
+
+#drop-area p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Hidden file input overlay */
+#image-input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+/* Button */
+button {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #084298;
+}
+
+button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Result Section */
+#result {
+    margin-top: 15px;
+    font-weight: 500;
+    color: #212529;
+    line-height: 1.5;
+}
+
+/* Image Preview */
+#preview {
+    max-width: 100%;
+    max-height: 220px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+    display: none;
+}
